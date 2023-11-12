@@ -39,7 +39,7 @@ Antes de construir o JAR para distribuição certifique-se de que o PostgreSQL e
 Recomenda-se utilizar este modo de compilação para implantar o back-end em ambientes externos de produção, desenvolvidmento, controle de qualidade e etc. A compilação do pacote pode ser feita através do IntelliJ no Windows ou em qualquer ambiente com o comando:
 
 ```
-mvn install
+mvn clean install
 ```
 
 O executável da API será gerado no em `./target/smart-roll-<versao>.jar`. Automaticamente o maven irá agregar também a pasta de assets junto do `.jar`. 
