@@ -1,4 +1,4 @@
-# Backend do Projeto de Chamada Inteligente - UFF
+# Chamada Inteligente API
 
 O projeto Chamada Inteligente trata-se de um sistema desenvolvido para a disciplina de Desenvolvimento Web Avançado para gerenciamento de uma chamada/lista de presença que está sendo desenvolvido para fins de um requisito parcial de avaliação. 
 
