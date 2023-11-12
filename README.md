@@ -1,11 +1,11 @@
 # Backend do Projeto de Chamada Inteligente - UFF
 
-O projeto Chamada Inteligente trata-se de um sistema desenvolvido na disciplina de Gerência de Projeto de Software - UFF para gerenciamento de uma chamada/lista de presença que está sendo desenvolvido para fins de um requisito parcial de avaliação, assim como concorre para ser implementado na Superintendência de Tecnologia da Informação (STI/UFF). 
+O projeto Chamada Inteligente trata-se de um sistema desenvolvido para a disciplina de Desenvolvimento Web Avançado para gerenciamento de uma chamada/lista de presença que está sendo desenvolvido para fins de um requisito parcial de avaliação. 
 
 * **Objetivo do projeto**:
   Fomentar o aprendizado de novas arquiteturas, tecnologias e métodos de desenvolvimento de produtos digitais através da experimentação e aplicação de conceitos aprendidos em aula.
 
-* Data: 05/11/2023
+* Data: 12/11/2023
 * Versão atual: 1.0
 
 ## 1. Pré-Requisitos
@@ -110,10 +110,4 @@ Este repositório está estruturado da seguinte forma:
   * Private se ela é utilizada somente dentro da classe em que está declarada.
   * Protected se ela é utilizada somente dentro da classem em que está declarada e suas subclasses.
   * Public se ela é utiliza fora da classe.
-
-## 6. Links relacionados
-
-Repositório referente ao Frontend do Projeto: https://github.com/Taisbruno/chamada-inteligente-uff
-
-Link do Github Issues do Projeto: https://github.com/users/Taisbruno/projects/1
 
