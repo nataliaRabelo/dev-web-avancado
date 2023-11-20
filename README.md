@@ -135,3 +135,13 @@ Este repositório está estruturado da seguinte forma:
   * Protected se ela é utilizada somente dentro da classem em que está declarada e suas subclasses.
   * Public se ela é utiliza fora da classe.
 
+## 6. Integrantes
+
+- Tais Bruno Rabelo
+- Paulo Vitor Novaes
+- Natalia Bruno
+- Marcos Cezar
+- Adriano Souza
+- Pedro Xavier
+
+
