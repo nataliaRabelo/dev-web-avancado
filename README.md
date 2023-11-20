@@ -143,5 +143,3 @@ Este repositório está estruturado da seguinte forma:
 - Marcos Cezar
 - Adriano Souza
 - Pedro Xavier
-
-
