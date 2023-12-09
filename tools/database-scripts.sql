@@ -25,6 +25,9 @@ BEGIN
 END 
 $$;
 
+-- Definir o fuso horário para o de Brasília (BRT)
+SET TIME ZONE 'America/Sao_Paulo';
+
 -- Inserting User
 INSERT INTO myuser (registration, name, cpf, email, password, type) VALUES 
 ('1', 'João da Silva', '1111', 'joao@example.com', 'joaospassword', 'student'),

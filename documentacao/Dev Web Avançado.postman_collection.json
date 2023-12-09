@@ -1,0 +1,661 @@
+{
+	"info": {
+		"_postman_id": "687e8d3d-6a25-4dc6-a9d2-bf6029de8cf5",
+		"name": "Dev Web Avançado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31699459"
+	},
+	"item": [
+		{
+			"name": "Obter Turmas e Chamadas de um usuário",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/class/classes?registration=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"class",
+						"classes"
+					],
+					"query": [
+						{
+							"key": "registration",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Alunos inscritos em uma Turma",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/students/enrolled-class?codeClass=1&semester=2023.1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"students",
+						"enrolled-class"
+					],
+					"query": [
+						{
+							"key": "codeClass",
+							"value": "1"
+						},
+						{
+							"key": "semester",
+							"value": "2023.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fazer Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cpf\":\"3333\",\"password\":\"hugopassword\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8443/login/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"login",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Chamada para uma Turma",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"latitude\":\"-23.550520\",\"longitude\":\"-46.633308\",\"class_code\":\"4\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8443/roll/create-roll/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"roll",
+						"create-roll",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Chamada",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/roll/get-roll?rollId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"roll",
+						"get-roll"
+					],
+					"query": [
+						{
+							"key": "rollId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Chamadas de uma turma",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/roll/list-rolls/?classCode=1&semester=2023.1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"roll",
+						"list-rolls",
+						""
+					],
+					"query": [
+						{
+							"key": "classCode",
+							"value": "1"
+						},
+						{
+							"key": "semester",
+							"value": "2023.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar Chamada Ativa",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/roll/close-roll?callId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"roll",
+						"close-roll"
+					],
+					"query": [
+						{
+							"key": "callId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Histórico de Chamadas de uma turma",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/roll/rolls-historic/?classCode=1&semester=2023.1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"roll",
+						"rolls-historic",
+						""
+					],
+					"query": [
+						{
+							"key": "classCode",
+							"value": "1"
+						},
+						{
+							"key": "semester",
+							"value": "2023.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submeter(Criar) Presença",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"studentRegistration\":\"3\",\"rollId\":\"1\",\"message\":\"Estava presente\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8443/presences/create-presence",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"presences",
+						"create-presence"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Presenças de uma chamada",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/presences/list-presences?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"presences",
+						"list-presences"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Alunos presentes em uma chamada",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/students/enrolled-roll?idRoll=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"students",
+						"enrolled-roll"
+					],
+					"query": [
+						{
+							"key": "idRoll",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalidar Presença de um aluno",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/presences/invalidate-presence?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"presences",
+						"invalidate-presence"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validar Presença de um Aluno",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/presences/validate-presence?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"presences",
+						"validate-presence"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir Atestado Médico para justificar falta",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"1\",\"certificate\":\"base64dgjhf226262dhdhfhwfhwh\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8443/presences/insert-certificate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"presences",
+						"insert-certificate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Chamada Agendada",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"classCode\": \"1\", \"dayOfWeek\": 2, \"startTime\": \"08:00:00\", \"endTime\": \"10:00:00\", \"longitude\": \"-49.060644\", \"latitude\": \"-26.922570\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8443/schedule/create-schedule/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"schedule",
+						"create-schedule",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Chamadas Agendadas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/schedule/list-schedules/?codeClass=CODIGO_DA_TURMA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"schedule",
+						"list-schedules",
+						""
+					],
+					"query": [
+						{
+							"key": "codeClass",
+							"value": "CODIGO_DA_TURMA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar Chamada Agendada",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rollId\":\"1\",\"endTime\":\"19:00:00\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8443/roll/close-roll-scheduled/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"roll",
+						"close-roll-scheduled",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar Chamada Agendada por Id do Agendamento",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/schedule/delete-schedule/?idSchedule=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"schedule",
+						"delete-schedule",
+						""
+					],
+					"query": [
+						{
+							"key": "idSchedule",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar Agendamentos de Chamadas de uma Turma",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8443/schedule/clear-schedules/?codeClass=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"schedule",
+						"clear-schedules",
+						""
+					],
+					"query": [
+						{
+							"key": "codeClass",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar Alunos Reprovado na Turma",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8443/students/failed-class?codeClass=1&semester=2023.1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"students",
+						"failed-class"
+					],
+					"query": [
+						{
+							"key": "codeClass",
+							"value": "1"
+						},
+						{
+							"key": "semester",
+							"value": "2023.1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
